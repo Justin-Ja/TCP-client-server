@@ -2,7 +2,6 @@
 
 ## Description
 
-Created by Justin Jakel
 A client/server TCP pair that allows the client to transfer a file for the server to write to disk and save.
 Works on localhost and across two servers on the same host.
 
