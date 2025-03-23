@@ -34,7 +34,7 @@ run_client() {
     fi
 }
 
-echo "Launching 5 client instances..."
+echo "Launching client instances..."
 echo "----------------------------"
 
 # EDIT THIS LINE if you want to change number of clients created.
