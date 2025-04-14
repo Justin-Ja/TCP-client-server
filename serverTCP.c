@@ -40,20 +40,20 @@ int main(int argc, char *argv[]){
     }
 
     //Set the socket options
-	if (setsockopt(mySocket,SOL_SOCKET,SO_REUSEADDR,&flag,sizeof(flag)) == -1) {
+    if (setsockopt(mySocket,SOL_SOCKET,SO_REUSEADDR,&flag,sizeof(flag)) == -1) {
     	printf("setsockopt() failed\n");
-		printf("%s\n", strerror(errno));
+	printf("%s\n", strerror(errno));
     	exit(1);
-	} 
+    } 
 
     // bind serv information to mysocket
-	if (bind(mySocket, (struct sockaddr *)&serv, sizeof(struct sockaddr)) != 0){
-		printf("Unable to open TCP socket on localhost:%d\n", servPortNum);
+    if (bind(mySocket, (struct sockaddr *)&serv, sizeof(struct sockaddr)) != 0){
+	printf("Unable to open TCP socket on localhost:%d\n", servPortNum);
 
-		printf("%s\n", strerror(errno));
-		close(mySocket);
-		return 0;
-	}
+	printf("%s\n", strerror(errno));
+	close(mySocket);
+	return 0;
+    }
 
     //start listening, allowing a queue of up to MAX_QUEUE_LEN pending connection
     printf("Listening for client connection\n");
